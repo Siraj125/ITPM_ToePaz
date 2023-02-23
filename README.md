@@ -1,5 +1,5 @@
 # ITPM_ToePaz
-An ecommerce website for a retail footwear store
+Apparently this is now a climate crisis website
 to run this app you have to install react,react-router-dom,react-scripts on frontend(client) and install express,cors,nodemon,mongoose on backend(server)
 
  command : 
