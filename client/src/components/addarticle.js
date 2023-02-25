@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Axios from 'axios';
-
+import "../css/article.css"
 
 function Addarticles(){
     const[title,setTitle]=useState('')
@@ -23,25 +23,27 @@ function Addarticles(){
         
     
     return(
-        <div>
-            <form onSubmit={add}>
+        <div className="article_page">
+            <form className="article_form" onSubmit={add}>
                 <input type='text'
+                    className="article_title"
                     placeholder="add title"
                     onChange={(event)=>{setTitle(event.target.value);
 
                     }}/>
                      <input type='text'
-                  
-                    placeholder="add image"
+                    className="article_title"
+                    placeholder="add image url"
                     onChange={(event)=>{setImage(event.target.value);
 
                     }}/>
                      <input type='text'
+                     className="article_para"
                     placeholder="add paragraph"
                     onChange={(event)=>{setParagraph(event.target.value);
 
                     }}/>
-                    <button type="submit">submit</button>
+                    <button className="addArticleButton" type="submit">submit</button>
             </form>
         </div>
     )
