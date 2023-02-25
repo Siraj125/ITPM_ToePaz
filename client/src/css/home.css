@@ -1,0 +1,23 @@
+.homepage_css{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(19, 29, 52);
+    background-image: url("https://i.imgur.com/8DYumaY.jpg3");
+    opacity: 0.9;
+}
+.homepage_slider{
+
+padding-bottom: 10px;
+}
+.homepage_components{
+    background-color: rgba(145, 91, 20, 0.5);
+    /* display: grid; */
+    height: 400px;
+    width: 100%;
+}
