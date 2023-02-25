@@ -3,19 +3,14 @@
 
 }
 
-
-
-
-
-
 .header {
   
   /* display: inline; */
-  background-color: #4c6db0;
+  background-color: #0a1b40;
  
   align-content: space-between;
   font-size: 30px;
-  color: rgb(59, 27, 27);
+  /* color: rgb(59, 27, 27); */
   height: 40px;
 }
 
@@ -25,18 +20,19 @@ li{
   display: inline;
   /* float: left; */
 
- 
-  padding: 1px;
+  padding: 5px;
 
 }
 li a{
  
   padding: 2px;
-  background-color: #ac4f4f;
+  color:aliceblue;
+ 
+  background-color: #123a45;
   text-decoration: none;
  
 }
 
 li a:hover{
-  background-color: aqua;
+  background-color: rgb(13, 135, 78);
 }

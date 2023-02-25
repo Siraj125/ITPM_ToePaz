@@ -1,10 +1,10 @@
 # ITPM_ToePaz
 Apparently this is now a climate crisis website
 
-to run this app you have to install react,react-router-dom,react-scripts on frontend(client) and install express,cors,nodemon,mongoose on backend(server)
+to run this app you have to install react,react-router-dom,react-scripts, axios on frontend(client) and install express,cors,nodemon,mongoose on backend(server)
 
  command : 
-  npm install react react-router-dom react-script
+  npm install react react-router-dom react-script axios
   
   npm install express cors mongoose nodemon
   

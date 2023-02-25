@@ -1,8 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require ("mongoose");
+const articleModel = require('./models/articleModel')
+const userModel = require('./models/userModel')
+
+
+const articles = require('./routes/articlesBE');
+
 
 const app = express();
+
+app.use("/articles",articles);
 app.use(cors());
 app.use(express.json());
 
