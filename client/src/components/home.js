@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeroSlider,{Slide} from "hero-slider";
 import img1 from "../images/img1.jpg"
 import img2 from "../images/img2.jpg"
@@ -8,6 +8,8 @@ import img5 from "../images/img5.jpg"
 import img6 from "../images/img6.jpg"
 
 import "../css/home.css"
+import  Axios  from 'axios';
+
 
 function Home  ()  {
     const image1 =img1;
@@ -16,8 +18,14 @@ function Home  ()  {
     const image4= img4;
     const image5= img5;
     const image6= img6;
+
+    const [listOfArticles,setListOfArticles]=useState([])
  
-       
+    useEffect (()=>{
+        Axios.get("http://localhost:3001/articles/getArticles").then((response)=>{
+        setListOfArticles(response.data);  
+        })
+    })
    
 
   return (
@@ -75,7 +83,18 @@ function Home  ()  {
             </HeroSlider>
         </div>
         <div className='homepage_components'>
-            components  
+           { listOfArticles.map((art)=>{
+            return<div className='home_component_wrapper' key={art._id}>
+      
+                   <img className='home_component_wrapper_img'
+                   src={art.image} alt={'blah'} />
+                   <div className='home_component_wrapper_text'>
+                        <div className='home_component_title'> {art.title}</div>
+                        <div className='home_component_para'> {art.paragraph} </div>
+                   </div>
+            </div>
+
+           })}
         </div>
     </div>
   )
