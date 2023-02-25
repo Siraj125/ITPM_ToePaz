@@ -8,5 +8,8 @@ to run this app you have to install react,react-router-dom,react-scripts on fron
   
   npm install express cors mongoose nodemon
   
+
  mongodb login: username :group117
                 password :1234567abc
+
+npm install hero-slider (for home page image slider)

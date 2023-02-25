@@ -1,0 +1,22 @@
+.homepage_css{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+
+    padding: 30px;
+
+    background-color: aquamarine;
+
+}
+
+.homepage_slider{
+
+padding-bottom: 10px;
+}
+.homepage_components{
+    background-color: rgb(145, 90, 20);
+    /* display: grid; */
+    height: 400px;
+    width: 100%;
+}
