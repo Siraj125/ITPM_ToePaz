@@ -1,0 +1,35 @@
+.article_page{
+padding-top: 10px;
+width: 100%;
+height: 100vh;
+background-image: url('http://constantine.typepad.com/.a/6a0120a7fc3be9970b01b8d1ec9464970c-pi');
+
+}
+
+.article_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.article_title{
+    width: 500px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 10px;
+}
+.article_para{
+    height: 400px;
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.addArticleButton{
+    margin-top: 10px;
+    background-color: rgb(69, 69, 138);
+    width: 300px;
+    height: 100px;
+    color:bisque;
+    border-radius: 10px;
+}
+
