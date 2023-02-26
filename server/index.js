@@ -6,11 +6,13 @@ const userModel = require('./models/userModel')
 
 
 const articles = require('./routes/articlesBE');
+const donation = require('./routes/donateTreesBE');
 
 
 const app = express();
 
 app.use("/articles",articles);
+app.use("/donation",donation);
 app.use(cors());
 app.use(express.json());
 

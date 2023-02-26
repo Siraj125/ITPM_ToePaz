@@ -4,6 +4,7 @@ import './App.css';
 import Login from './components/login';
 import Home  from './components/home';
 import Addarticles from './components/addarticle';
+import DonateTrees from './components/donatetrees';
 import {Link} from 'react-router-dom'
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
           <li> <Link to='/login'>login </Link></li>
           <li> <Link to='/'>home</Link></li>
           <li> <Link to='/articles'>articles</Link></li>
+          <li> <Link to='/donate'>Donate</Link></li>
+
         </ul>
       </div>
     
@@ -23,6 +26,7 @@ function App() {
         <Route  path="/login" element={<Login />}/>
         <Route  path="/" element={<Home />}/>
         <Route  path="/articles" element={<Addarticles />}/>
+        <Route  path="/donate" element={<DonateTrees />}/>
       </Routes>
         
      
