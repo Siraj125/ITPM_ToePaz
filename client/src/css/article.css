@@ -3,7 +3,14 @@ padding-top: 10px;
 width: 100%;
 height: 100vh;
 background-image: url('http://constantine.typepad.com/.a/6a0120a7fc3be9970b01b8d1ec9464970c-pi');
+font-size: 20px;
 
+}
+.addArticle{
+    background-color: rgba(249, 208, 193, 0.384);
+    width:100% ;
+    height: 700px;
+   
 }
 
 .article_form{
@@ -33,3 +40,89 @@ background-image: url('http://constantine.typepad.com/.a/6a0120a7fc3be9970b01b8d
     border-radius: 10px;
 }
 
+.article_image_update_input{
+    height: 30px;
+    width: 100%;
+}
+
+.article_image{
+    width: 400px;
+    height: 200px;
+}
+
+
+.article_component_wrapper_img{
+    padding: 10px;
+    height: 300px;
+    width: 400px;
+    background-color: brown;
+}
+
+
+.article_component_wrapper_text{
+    padding-top: 10px;
+    height: 250px;
+    width: 100%;
+    background-color: rgb(11, 211, 78);
+}
+
+.article_component_title{
+    display: grid;
+    height: 100px;
+    background-color: aqua;
+    width: 100%;
+
+}
+.article_component_para{
+    display: grid;
+    height: 150px;
+    background-color: blueviolet;
+    width: 100%;
+   
+
+}
+
+
+.article_component_wrapper{
+    background-color: rgb(58, 58, 81);
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    /* align-content:space-between; */
+}
+
+.article_components{
+    background-color: rgba(145, 91, 20, 0.5);
+    /* display: grid; */
+    height: 400px;
+    width: 100%;
+    overflow-y: scroll;
+}
+.article_buttons{
+    background-color: pink;
+    margin-left:0 ;
+    display: block;
+    justify-content: center;
+    
+}
+
+.article_button_update{
+    height: 40px;
+    width: 100px;
+    
+    
+    
+}
+
+.article_button_delete{
+    height: 40px;
+    width: 100px;
+
+}
+
+.article_update_input{
+    height: 40px;
+    margin:  20px;
+}

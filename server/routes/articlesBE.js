@@ -25,4 +25,24 @@ router.post("/addArticles",async (req, res ) => {
     res.json(articles);
 });
 
+router.post("/updateArticle",async(req,res)=>{
+    const newTitle = req.body.newTitle;
+    const newImage = req.body.newImage;
+    const newPara = req.body.newPara;
+    const id= req.body._id;
+    console.log(newTitle,newImage,newPara,id);
+
+    try{
+        let filter ={'_id ': id}
+        let update ={
+            $set :{'title':newTitle,'image': newImage, 'paragraph':newPara,},
+        }
+        await articleModel.findOneAndUpdate(filter,update);
+    }
+    catch(err){
+        console.log(err);
+    }
+    res.send('updated')
+})
+
 module.exports = router;

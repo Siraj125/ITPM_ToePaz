@@ -26,6 +26,7 @@ function Home  ()  {
         setListOfArticles(response.data);  
         })
     })
+
    
 
   return (
@@ -85,15 +86,12 @@ function Home  ()  {
         <div className='homepage_components'>
            { listOfArticles.map((art)=>{
             return<div className='home_component_wrapper' key={art._id}>
-      
-                   <img className='home_component_wrapper_img'
-                   src={art.image} alt={'blah'} />
-                   <div className='home_component_wrapper_text'>
-                        <div className='home_component_title'> {art.title}</div>
-                        <div className='home_component_para'> {art.paragraph} </div>
-                   </div>
-            </div>
-
+                    <img className='home_component_wrapper_img' src={art.image} alt={'blah'} />
+                    <div className='home_component_wrapper_text'>
+                            <div className='home_component_title'> {art.title}</div>
+                            <div className='home_component_para'> {art.paragraph} </div>
+                    </div>
+                  </div>
            })}
         </div>
     </div>
