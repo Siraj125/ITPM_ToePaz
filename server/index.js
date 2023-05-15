@@ -6,11 +6,14 @@ const userModel = require('./models/userModel')
 
 
 const articles = require('./routes/articlesBE');
+const users = require('./routes/loginBE')
 
 
 const app = express();
 
 app.use("/articles",articles);
+app.use("/login", users)
+
 app.use(cors());
 app.use(express.json());
 

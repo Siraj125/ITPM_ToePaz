@@ -1,17 +1,18 @@
 import React from 'react';
 import  { Routes, Route} from "react-router-dom"
+import {Link} from 'react-router-dom'
 import './App.css';
 import Login from './components/login';
 import Home  from './components/home';
 import Addarticles from './components/addarticle';
-import {Link} from 'react-router-dom'
+import UpdateArticle from './components/updateArticle';
 
 function App() {
   return (
     <>
     <div className="App">
       <div className='header'>
-        <ul>
+        <ul className='header-list'>
           <li> <Link to='/login'>login </Link></li>
           <li> <Link to='/'>home</Link></li>
           <li> <Link to='/articles'>articles</Link></li>
@@ -23,6 +24,7 @@ function App() {
         <Route  path="/login" element={<Login />}/>
         <Route  path="/" element={<Home />}/>
         <Route  path="/articles" element={<Addarticles />}/>
+        <Route  path="/updateArticle/:id" element={<UpdateArticle/>}/>
       </Routes>
         
      
