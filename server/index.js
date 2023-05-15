@@ -6,11 +6,15 @@ const userModel = require('./models/userModel')
 
 
 const articles = require('./routes/articlesBE');
+const calculator = require('./routes/calcBE');
+
 
 
 const app = express();
 
 app.use("/articles",articles);
+app.use("/calculator",calculator);
+
 app.use(cors());
 app.use(express.json());
 
