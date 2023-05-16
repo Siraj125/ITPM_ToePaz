@@ -17,13 +17,36 @@ router.get("/getArticles", async (req, res)=>{
 
 });
 
-router.post("/addArticles",async (req, res ) => {
-    const articles = req.body;
-    const newArticles = new articleModel(articles);
-    await newArticles.save();
+// router.post("/addArticles",async (req, res ) => {
+//     const articles = req.body;
+//     const newArticles = new articleModel(articles);
+//     await newArticles.save();
 
-    res.json(articles);
-});
+//     res.json(articles);
+// });
+
+router.post('/addArticles', async (req, res) => {
+    const { title, image, paragraph } = req.body;
+    
+    if (!title || !image || !paragraph) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+  
+    try {
+      const newArticle = new articleModel({
+        title,
+        image,
+        paragraph,
+        createdAt: new Date(), // Add the current date and time
+      });
+  
+      await newArticle.save();
+      res.json(newArticle);
+    } catch (err) {
+      res.status(500).json({ message: 'Error adding article', error: err });
+    }
+  });
+  
 
 // router.post("/updateArticle/:id",async(req,res)=>{
 //     const newTitle = req.body.newTitle;

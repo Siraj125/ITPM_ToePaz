@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import Axios from 'axios';
 import "../css/article.css"
 import "../css/home.css"
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 // import UpdateArticle from "./updateArticle";
 // import { useParams } from "react-router-dom";
 
@@ -12,6 +12,7 @@ function Addarticles(props){
     const[image,setImage]=useState('')
     const[paragraph,setParagraph]=useState('')
     const[listOfArticles,setListOfArticles]=useState([])
+    const navigate = useNavigate();
 
     const addArti = async(event)=>{
         event.preventDefault();
@@ -20,7 +21,7 @@ function Addarticles(props){
             image :event.target[1].value,
             paragraph :event.target[2].value,
                  }).then((response)=>{
-                alert("sdadsd");
+                alert("successfully added");
             })
             console.log({title:title, image:image, paragraph:paragraph})
 
@@ -53,16 +54,20 @@ function Addarticles(props){
 
     const deleteArticle = (id) => {
         console.log(id);
-        Axios.delete(`http://localhost:3001/articles/deleteArticle/${id}`)
-          .then((response) => {
-            console.log('Article deleted:', response.data);
-            alert('Article deleted');
-            // Update the list of articles by filtering out the deleted article
-            setListOfArticles((prevList) => prevList.filter((article) => article._id !== id));
-          })
-          .catch((error) => {
-            console.error('Error deleting article:', error);
-          });
+        const shouldDelete = window.confirm("Are you sure you want to update this account?");
+        if(shouldDelete){
+            Axios.delete(`http://localhost:3001/articles/deleteArticle/${id}`)
+            .then((response) => {
+                console.log('Article deleted:', response.data);
+                alert('Article deleted');
+                // Update the list of articles by filtering out the deleted article
+                setListOfArticles((prevList) => prevList.filter((article) => article._id !== id));
+            })
+            .catch((error) => {
+                console.error('Error deleting article:', error);
+            });
+            navigate("/articles")
+        }
       };
       
     
@@ -73,17 +78,20 @@ function Addarticles(props){
                     <input type='text'
                         className="article_title"
                         placeholder="add title"
+                        required="required"
                         onChange={(event)=>{setTitle(event.target.value);
 
                         }}/>
                         <input type='text'
                         className="article_title"
                         placeholder="add image url"
+                        required="required"
                         onChange={(event)=>{setImage(event.target.value);
 
                         }}/>
                         <input type='text'
                         className="article_para"
+                        required="required"
                         placeholder="add paragraph"
                         onChange={(event)=>{setParagraph(event.target.value);
 
@@ -129,11 +137,12 @@ function Addarticles(props){
                                 to={`/updateArticle/${art._id}`}
                                 // onClick={()=>Update(art)}
                                 className="article_button_update" > update</Link>
-                                              <button onClick={() => deleteArticle(art._id)} className="article_button_delete">Delete</button>
+                                    <button onClick={() => deleteArticle(art._id)} className="article_button_delete">Delete</button>
 
                                 </div>
                             </div>
                 })}
+                <Link to="/ArticleReport">Generate Report</Link>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import Login from './components/login';
 import Home  from './components/home';
 import Addarticles from './components/addarticle';
 import UpdateArticle from './components/updateArticle';
+import ArticleReport from './components/articleReport';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route  path="/" element={<Home />}/>
         <Route  path="/articles" element={<Addarticles />}/>
         <Route  path="/updateArticle/:id" element={<UpdateArticle/>}/>
+        <Route  path="/ArticleReport" element={<ArticleReport/>}/>
       </Routes>
         
      

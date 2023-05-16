@@ -14,6 +14,10 @@ const artileSchema = new mongoose.Schema(
             type:String,
             require:true,
         },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+          },
         
     },
     {

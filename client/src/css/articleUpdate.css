@@ -1,0 +1,49 @@
+.updateArticles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* background-color: green; */
+    height: 80vh;
+  }
+  
+  .updateArticlesForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 40px;
+    border-radius:20px ;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.495);
+  }
+  
+  .article_image_update_input,
+  .article_update_input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .article_update_paragraph{
+    width: 300px;
+    padding: 10px;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .articleUpdateButton {
+    padding: 10px 20px;
+    background-color: white;
+    color: green;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .articleUpdateButton:hover {
+    background-color: green;
+    color :white;
+    border-radius: 10px;
+  }
+  
