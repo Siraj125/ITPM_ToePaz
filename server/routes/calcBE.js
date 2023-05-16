@@ -45,12 +45,12 @@ router.post("/addCalc",async (req, res ) => {
 //     res.send('updated')
 // })
 router.put("/update",async(req,res)=>{
-    const newResName = req.body.newResName;
+    const newComment = req.body.newComment;
     const id = req.body.id;
 
     try{
         await calcModel.findById(id, (error, calcToUpdate) => {
-            calcToUpdate.resname=newResName;
+            calcToUpdate.comment=newComment;
             calcToUpdate.save();
         });
     }catch(err){

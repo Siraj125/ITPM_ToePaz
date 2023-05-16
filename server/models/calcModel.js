@@ -14,7 +14,14 @@ const calcSchema = new mongoose.Schema(
             type:String,
             require:true,
         },
-        
+        comment:{
+            type:String,
+            require:false,
+        },
+        addedon: {
+            type: Date,
+            default: Date.now(),
+        },
     },
     {
         collection:"calc_data"
