@@ -16,6 +16,19 @@ router.get("/getArticles", async (req, res)=>{
     })
 
 });
+router.get("/getArticles/:id", async (req, res) => {
+  const articleId = req.params.id;
+
+  articleModel.findById(articleId, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+
 
 // router.post("/addArticles",async (req, res ) => {
 //     const articles = req.body;

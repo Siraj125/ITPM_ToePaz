@@ -6,7 +6,7 @@ import img3 from "../images/img3.jpg"
 import img4 from "../images/img4.jpg"
 import img5 from "../images/img5.jpg"
 import img6 from "../images/img6.jpg"
-
+import { Link } from 'react-router-dom';
 import "../css/home.css"
 import  Axios  from 'axios';
 
@@ -34,7 +34,7 @@ function Home  ()  {
         <h1>Join us in saving the world</h1>
         <div className='homepage_slider'>
             <HeroSlider
-                height={"600px"}
+                height={"400px"}
                 autoplay    
                 controller={{
                     initialSlide: 1,
@@ -85,13 +85,13 @@ function Home  ()  {
         </div>
         <div className='homepage_components'>
            { listOfArticles.map((art)=>{
-            return<div className='home_component_wrapper' key={art._id}>
+            return<Link to={`/articlePage/${art._id}`} className='home_component_wrapper' key={art._id}>
                     <img className='home_component_wrapper_img' src={art.image} alt={'blah'} />
                     <div className='home_component_wrapper_text'>
                             <div className='home_component_title'> {art.title}</div>
                             <div className='home_component_para'> {art.paragraph} </div>
                     </div>
-                  </div>
+                  </Link>
            })}
         </div>
     </div>

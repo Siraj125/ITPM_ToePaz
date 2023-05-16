@@ -137,7 +137,7 @@ function Addarticles(props){
                                 to={`/updateArticle/${art._id}`}
                                 // onClick={()=>Update(art)}
                                 className="article_button_update" > update</Link>
-                                    <button onClick={() => deleteArticle(art._id)} className="article_button_delete">Delete</button>
+                                    <button onClick={() => deleteArticle(art._id)} className="article_button_deletes">Delete</button>
 
                                 </div>
                             </div>

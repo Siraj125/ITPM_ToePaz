@@ -8,6 +8,7 @@ import Calculator  from './components/calculator';
 import Addarticles from './components/addarticle';
 import UpdateArticle from './components/updateArticle';
 import ArticleReport from './components/articleReport';
+import ArticlePage from './components/articlePage';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route  path="/updateArticle/:id" element={<UpdateArticle/>}/>
         <Route  path="/ArticleReport" element={<ArticleReport/>}/>
         <Route  path="/calculator" element={<Calculator />}/>
+        <Route  path="/articlePage/:id" element={<ArticlePage/>}/>
+
 
       </Routes>
         

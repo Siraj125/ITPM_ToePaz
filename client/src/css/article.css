@@ -201,18 +201,23 @@ font-size: 20px;
     margin-top: 10px;
   }
   
-  .article_button_update,
-  .article_button_delete {
+  .article_button_update{
     padding: 5px 10px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
   }
   
-  .article_button_delete {
+  .article_button_deletes {
     background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
   }
   
   .article_image{
