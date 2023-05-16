@@ -7,12 +7,16 @@ const userModel = require('./models/userModel')
 
 const articles = require('./routes/articlesBE');
 const users = require('./routes/loginBE')
+const calculator = require('./routes/calcBE');
+
 
 
 const app = express();
 
 app.use("/articles",articles);
 app.use("/login", users)
+
+app.use("/calculator",calculator);
 
 app.use(cors());
 app.use(express.json());
